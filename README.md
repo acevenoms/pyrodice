@@ -129,7 +129,7 @@ These definitions are persistent between restarts, they are added to the default
 They can also be contained in namespaces, to avoid really ugly names with underscores and so on.
 Procedures that are single expressions will be evaluated as is and display their result as they normally would.
 Procedures with multiple expressions will not display the results of individual expressions unless explicitly told to with the display verb.
-The display verb evalutes exactly as the expression it displays would (e.g. display 2d10 gives the same result as 2d10)
+The display verb evalutes exactly as the expression it displays would (e.g. `display 2d10` gives the same result as `2d10`)
 
 Examples:
 ```
