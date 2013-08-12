@@ -4,16 +4,18 @@ pyrodice
 An interactive command-line dice roller written in python that can take advantage of advanced random number generators
 
 Method
-======
+------
 
 Interactive shell style interface. Interaction is through instructional verbs, like an assembly language.
 Example:
 
+```
 [roll]>> 3d10
 [9, 1, 8]
 [3d10+0]>> sum
 18
 [3d10+0]>> bye
+```
 
 The first instruction (in the form of standard RPG dice rolling notation) is to roll a Set of dice
 The result is a list of random numbers
@@ -23,19 +25,33 @@ The result is the sum
 Plans for the future could see this turn into a Lisp-like language
 
 Planned/Conceptual verbiage
-===========================
+---------------------------
 
 Standard RPG dice rolling syntax, parsed by this regex: (\d*)d(\d+)([+-]\d+)?
 Example:
+
+```
 >> 3d10+7
 [15, 9, 11]
+```
+
+***
 
 Display strings, litteral printed messages
 Example:
+
+```
 >> "Hello, pyrodice!"
 Hello, pyrodice!
+```
 
+***
+
+```
 sum [expr]
+```
+
+***
 Sums the a result if it is a list (pretty much a direct mapping to the python sum() built-in)
 Examples:
 >> 3d10
