@@ -20,28 +20,28 @@ def roll(multi, face, mod):
 	#just going with a rand implementation for now to conserve bandwidth
 	return [random.randint(1, face)+mod for x in range(multi)]
 
-def rollSum(args):
+def rollSum(results, args):
+	return sum(results)
+
+def rollCount(results, args):
 	pass
 
-def rollCount(args):
+def rollCountAbove(results, args):
 	pass
 
-def rollCountAbove(args):
+def rollCountBelow(results, args):
 	pass
 
-def rollCountBelow(args):
+def rollShow(results, args):
 	pass
 
-def rollShow(args):
+def rollSort(results, args):
 	pass
 
-def rollSort(args):
+def showHelp(results, args):
 	pass
 
-def showHelp(args):
-	pass
-
-def unrecognizedInput(args):
+def unrecognizedInput(results, args):
 	pass
 
 def main():
@@ -65,7 +65,7 @@ def main():
 		else:
 			raw_command = prompt.split()
 			command = raw_command[0]
-			{
+			print {
 				'sum' 			: rollSum,
 				'count'			: rollCount,
 				'countabove'	: rollCountAbove,
@@ -73,8 +73,7 @@ def main():
 				'show'			: rollShow,
 				'sort'			: rollSort,
 				'help'			: showHelp,
-			}.get(command, unrecognizedInput)(raw_command[1:])
-
+			}.get(command, unrecognizedInput)(lastroll, raw_command[1:])
 
 if __name__ == "__main__":
 	main()
